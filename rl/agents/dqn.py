@@ -216,7 +216,7 @@ class DQNAgent(AbstractDQNAgent):
         self.model.save(filepath,overwrite=overwrite)
         
     def load(self,filepath):
-        self.model = load_model(filepath)
+        return load_model(filepath)
     
     def reset_states(self):
         self.recent_action = None
